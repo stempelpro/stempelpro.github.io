@@ -1,261 +1,522 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jasa pembuatan stempel profesional dengan desain customizable, keamanan terjamin, dan harga terjangkau. Pesan sekarang dan dapatkan stempel berkualitas tinggi!">
-    <title>Jasa Pembuatan Stempel Profesional</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-        .navbar, .footer {
-            background-color: #2c3e50;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, #3498db, #8e44ad);
-            color: white;
-            padding: 100px 0;
-        }
-        .icon-headline {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-        .feature-icon {
-            font-size: 30px;
-            color: #3498db;
-        }
-        .pricing-card {
-            transition: transform 0.3s;
-        }
-        .pricing-card:hover {
-            transform: scale(1.05);
-        }
-        .testimonial-slider {
-            background-color: #f8f9fa;
-            padding: 50px 0;
-        }
-        .footer {
-            color: white;
-            padding: 20px 0;
-        }
-        .go-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jasa pembuatan stempel profesional untuk kebutuhan bisnis, legal, dan pribadi. Dapatkan stempel berkualitas tinggi dengan desain sesuai kebutuhan Anda.">
+  <title>Jasa Pembuatan Stempel Profesional</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="stempel-icon.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    .navbar, .footer {
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+      color: #fff;
+      padding: 100px 0;
+    }
+    .icon-headline {
+      font-size: 70px;
+      color: #f1c40f;
+    }
+    .feature-icon {
+      font-size: 40px;
+      color: #3498db;
+    }
+    .pricing-card {
+      transition: transform 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: scale(1.05);
+    }
+/* Pricing List Style */
+.pricing-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pricing-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-list li i {
+    margin-right: 10px;
+    color: #3498db; /* Warna ikon */
+}
+    .testimonial-slider {
+      background-color: #ecf0f1;
+      padding: 50px 0;
+    }
+    .footer {
+      padding: 20px 0;
+      position: relative;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      display: none;
+      z-index: 1000;
+    }
+    .contact-form {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .contact-form h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .portfolio-img {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .portfolio-img:hover {
+      transform: scale(1.1);
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: #f8f9fa;
+      color: #3498db;
+    }
+/* Portfolio Image Size */
+.portfolio-img {
+    width: 100%; /* Lebar gambar mengikuti container */
+    height: 250px; /* Tinggi gambar diseragamkan */
+    object-fit: cover; /* Gambar akan di-crop agar sesuai dengan ukuran */
+    border-radius: 10px; /* Tambahkan border-radius untuk tampilan yang lebih menarik */
+    transition: transform 0.3s ease; /* Efek hover */
+}
+
+.portfolio-img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+  </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">StempelPro</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-                </ul>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="stempel-logo-white.png" alt="jasa pembuatan stempel" style="height: 40px;"> Jasa Pembuatan Stempel
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Fitur</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Harga</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonial">Testimonial</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero-section text-center">
+  <div class="container">
+    <h1 class="display-4"><i class="fas fa-stamp icon-headline"></i> Jasa Pembuatan Stempel Profesional</h1>
+    <p class="lead">Solusi terbaik untuk kebutuhan stempel bisnis, legal, dan pribadi Anda.</p>
+    <a href="https://wa.me/6281330763633" class="btn btn-light btn-lg">Hubungi Kami</a> <a href="https://wa.me/6281330763633" class="btn btn-dark btn-lg">Konsultasi Gratis</a>
+  </div>
+</section>
+
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Deskripsi Section -->
+<section class="container my-5">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Mengapa Stempel Penting?</h2>
+      <p>Stempel adalah alat penting untuk keperluan bisnis, legal, dan administratif. Dengan <strong>jasa pembuatan stempel profesional</strong>, Anda dapat memastikan bahwa stempel Anda berkualitas tinggi, tahan lama, dan sesuai dengan kebutuhan Anda.</p>
+    </div>
+    <div class="col-md-6">
+      <h2>Keuntungan Memiliki Stempel Berkualitas</h2>
+      <p>Stempel berkualitas memastikan hasil cetak yang tajam dan konsisten. Dengan <strong>desain yang dapat disesuaikan</strong>, stempel Anda dapat mencerminkan identitas bisnis atau pribadi Anda dengan baik.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Fitur Section -->
+<section id="features" class="container my-5">
+  <h2 class="text-center mb-4">Fitur Kami</h2>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <i class="fas fa-tools feature-icon"></i>
+      <h3>Bahan Berkualitas</h3>
+      <p>Kami menggunakan bahan berkualitas tinggi untuk stempel yang tahan lama.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-pencil-ruler feature-icon"></i>
+      <h3>Desain Custom</h3>
+      <p>Desain stempel dapat disesuaikan sesuai kebutuhan Anda.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-shield-alt feature-icon"></i>
+      <h3>Keamanan Terjamin</h3>
+      <p>Proses pembuatan stempel yang aman dan terpercaya.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-stopwatch feature-icon"></i>
+      <h3>Cepat dan Tepat Waktu</h3>
+      <p>Proses pembuatan stempel yang cepat tanpa mengorbankan kualitas.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-leaf feature-icon"></i>
+      <h3>Ramah Lingkungan</h3>
+      <p>Bahan yang kami gunakan ramah lingkungan dan aman.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-headset feature-icon"></i>
+      <h3>Dukungan 24/7</h3>
+      <p>Tim support siap membantu Anda kapan saja.</p>
+    </div>
+    <!-- Fitur Baru -->
+    <div class="col-md-4 text-center">
+      <i class="fas fa-check-circle feature-icon"></i>
+      <h3>Garansi Produk</h3>
+      <p>Kami memberikan garansi pada setiap stempel yang kami buat.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-credit-card feature-icon"></i>
+      <h3>Pembayaran Mudah</h3>
+      <p>Metode pembayaran yang fleksibel dan aman.</p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fas fa-comments feature-icon"></i>
+      <h3>Gratis Konsultasi</h3>
+      <p>Layanan konsultasi gratis untuk membantu Anda memilih stempel yang tepat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Layanan Pembuatan Stempel -->
+<section id="stempel" class="container my-5">
+  <h2 class="text-center mb-4">Layanan Pembuatan Stempel</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Jenis Stempel yang Kami Tawarkan</h3>
+      <ul>
+        <li><strong>Stempel Biasa</strong>: Cocok untuk keperluan kantor, sekolah, atau organisasi.</li>
+        <li><strong>Stempel Digital</strong>: Solusi modern untuk kebutuhan stempel elektronik.</li>
+        <li><strong>Stempel Logo</strong>: Desain khusus untuk mencetak logo perusahaan atau organisasi.</li>
+        <li><strong>Stempel Trodat</strong>: Stempel praktis dengan sistem isi ulang tinta yang mudah digunakan.</li>
+      </ul>
+    </div>
+    <div class="col-md-6">
+      <h3>Proses Pembuatan Stempel</h3>
+      <ol>
+        <li><strong>Konsultasi</strong>: Tim kami akan membantu Anda memilih jenis stempel yang sesuai.</li>
+        <li><strong>Desain</strong>: Kami akan membuat desain stempel sesuai permintaan Anda.</li>
+        <li><strong>Produksi</strong>: Stempel diproduksi dengan teknologi terkini untuk kualitas terbaik.</li>
+        <li><strong>Pengiriman</strong>: Stempel siap dikirimkan ke alamat Anda dalam waktu singkat.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Pricing Section -->
+  <section id="pricing" class="container my-5">
+    <h2 class="text-center mb-4">Paket Harga</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card pricing-card text-center">
+          <div class="card-header bg-primary text-white">
+            <h3>Basic</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Rp 100.000</h4>
+            <ul class="pricing-list">
+              <li><i class="fas fa-check"></i> Stempel Biasa</li>
+              <li><i class="fas fa-check"></i> Ukuran Kecil</li>
+              <li><i class="fas fa-check"></i> Desain Sederhana</li>
+              <li><i class="fas fa-check"></i> Pengiriman 3 Hari</li>
+            </ul>
+            <a href="https://wa.me/6281330763633" class="btn btn-primary">Pilih Paket</a>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section text-center">
-        <div class="container">
-            <i class="fas fa-stamp icon-headline"></i>
-            <h1>Jasa Pembuatan Stempel Profesional</h1>
-            <p class="lead">Desain customizable, keamanan terjamin, dan harga terjangkau.</p>
-            <a href="#pricing" class="btn btn-light btn-lg">Pesan Sekarang</a>
+      </div>
+      <div class="col-md-4">
+        <div class="card pricing-card text-center">
+          <div class="card-header bg-success text-white">
+            <h3>Standar</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Rp 200.000</h4>
+            <ul class="pricing-list">
+              <li><i class="fas fa-check"></i> Stempel Logo</li>
+              <li><i class="fas fa-check"></i> Ukuran Sedang</li>
+              <li><i class="fas fa-check"></i> Desain Menarik</li>
+              <li><i class="fas fa-check"></i> Pengiriman 2 Hari</li>
+            </ul>
+            <a href="https://wa.me/6281330763633" class="btn btn-success">Pilih Paket</a>
+          </div>
         </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <i class="fas fa-shield-alt feature-icon"></i>
-                    <h3>Keamanan</h3>
-                    <p>Stempel kami dilengkapi dengan fitur keamanan canggih untuk mencegah pemalsuan.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-palette feature-icon"></i>
-                    <h3>Customizable</h3>
-                    <p>Desain stempel dapat disesuaikan sesuai kebutuhan Anda.</p>
-                </div>
-                <div class="col-md-4">
-                    <i class="fas fa-truck feature-icon"></i>
-                    <h3>Pengiriman Cepat</h3>
-                    <p>Pengiriman cepat dan aman ke seluruh Indonesia.</p>
-                </div>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card pricing-card text-center">
+          <div class="card-header bg-warning text-white">
+            <h3>Premium</h3>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">Rp 500.000</h4>
+            <ul class="pricing-list">
+              <li><i class="fas fa-check"></i> Stempel Trodat</li>
+              <li><i class="fas fa-check"></i> Ukuran Besar</li>
+              <li><i class="fas fa-check"></i> Desain Premium</li>
+              <li><i class="fas fa-check"></i> Pengiriman 1 Hari</li>
+            </ul>
+            <a href="https://wa.me/6281330763633" class="btn btn-warning">Pilih Paket</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Paket Harga</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card pricing-card text-center">
-                        <div class="card-header">
-                            <h3>Basic</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Rp 100.000</h4>
-                            <p class="card-text">Stempel sederhana dengan desain standar.</p>
-                            <a href="#contact" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card pricing-card text-center">
-                        <div class="card-header">
-                            <h3>Standar</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Rp 200.000</h4>
-                            <p class="card-text">Stempel dengan desain lebih detail.</p>
-                            <a href="#contact" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card pricing-card text-center">
-                        <div class="card-header">
-                            <h3>Premium</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Rp 300.000</h4>
-                            <p class="card-text">Stempel premium dengan fitur keamanan tambahan.</p>
-                            <a href="#contact" class="btn btn-primary">Pesan Sekarang</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="container my-5">
+  <h2 class="text-center mb-4">Portfolio Kami</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <img src="stempel1.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="stempel2.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="stempel3.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="stempel4.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="stempel5.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="stempel6.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+    </div>
+  </div>
+</section>
+
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- FAQ Section -->
+<section id="faq" class="container my-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions (FAQ)</h2>
+  <div class="accordion" id="faqAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          Berapa lama proses pembuatan stempel?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Proses pembuatan stempel biasanya memakan waktu 1-3 hari, tergantung pada jenis stempel yang dipesan.
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="placeholder.png" class="img-fluid" alt="Portfolio 1">
-                </div>
-                <div class="col-md-4">
-                    <img src="placeholder.png" class="img-fluid" alt="Portfolio 2">
-                </div>
-                <div class="col-md-4">
-                    <img src="placeholder.png" class="img-fluid" alt="Portfolio 3">
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Apakah saya bisa meminta revisi desain?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Ya, kami menyediakan revisi desain hingga 2 kali untuk memastikan kepuasan Anda.
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonial-slider py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Testimoni</h2>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <blockquote class="blockquote text-center">
-                            <p>"Pelayanan cepat dan hasilnya memuaskan!"</p>
-                            <footer class="blockquote-footer">Pelanggan 1</footer>
-                        </blockquote>
-                    </div>
-                    <div class="carousel-item">
-                        <blockquote class="blockquote text-center">
-                            <p>"Desain stempel sangat sesuai dengan yang saya inginkan."</p>
-                            <footer class="blockquote-footer">Pelanggan 2</footer>
-                        </blockquote>
-                    </div>
-                    <div class="carousel-item">
-                        <blockquote class="blockquote text-center">
-                            <p>"Harga terjangkau dan kualitas terbaik."</p>
-                            <footer class="blockquote-footer">Pelanggan 3</footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
+
+<!-- Testimonial Section -->
+<section id="testimonial" class="testimonial-slider">
+  <div class="container">
+    <h2 class="text-center mb-4">Testimonial</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Testimonial 1 -->
+        <div class="carousel-item active">
+          <div class="text-center">
+            <img src="testimonial1.jpg" alt="Testimonial 1" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p>"Pelayanan sangat memuaskan, stempel yang dibuat sangat berkualitas!"</p>
+            <h5>Sego Goreng Pak Djie</h5>
+            <small>CEO Perusahaan A</small>
+          </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Kontak Kami</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="package" class="form-label">Paket Stempel</label>
-                    <select class="form-select" id="package" required>
-                        <option value="Basic">Basic</option>
-                        <option value="Standar">Standar</option>
-                        <option value="Premium">Premium</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-            </form>
+        <!-- Testimonial 2 -->
+        <div class="carousel-item">
+          <div class="text-center">
+            <img src="testimonial2.jpg" alt="Testimonial 2" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p>"Timnya sangat responsif dan membantu."</p>
+            <h5>Abdul Latief</h5>
+            <small>Pemilik Bisnis B</small>
+          </div>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2020 - <span id="currentYear"></span> StempelPro. All rights reserved.</p>
+		<div class="carousel-item">
+          <div class="text-center">
+            <img src="testimonial3.jpg" alt="Testimonial 3" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p>"Hasilnya diluar dugaan. mantap pokoknya!"</p>
+            <h5>Muhaimin Iskandar. M</h5>
+            <small>Pemilik Toko C</small>
+          </div>
         </div>
-    </footer>
+		<div class="carousel-item">
+          <div class="text-center">
+            <img src="testimonial4.jpg" alt="Testimonial 4" class="rounded-circle mb-3" style="width: 100px; height: 100px;">
+            <p>"Bagus sekali. respon cepat, kualitas wahid!"</p>
+            <h5>Kepsek Dinoyo</h5>
+            <small>Sekolah Dasar Miftadil Huda</small>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
 
-    <!-- Go to Top Button -->
-    <a href="#" class="btn btn-primary go-to-top"><i class="fas fa-arrow-up"></i></a>
+<!-- Fancy Divider -->
+<hr class="fancy-divider">
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Update current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+<!-- Formulir Kontak -->
+<section id="contact" class="container my-5">
+  <div class="contact-form">
+    <h2 class="text-center mb-4">Hubungi Kami</h2>
+    <form id="contactForm">
+      <div class="mb-3">
+        <input type="text" class="form-control" id="nama" placeholder="Nama" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
+      </div>
+      <div class="mb-3">
+        <select class="form-select" id="paket" required>
+          <option value="" disabled selected>Pilih Paket</option>
+          <option value="Basic">Basic</option>
+          <option value="Standar">Standar</option>
+          <option value="Premium">Premium</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" id="pesan" rows="3" placeholder="Pesan Anda" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label>Apakah Anda ingin konsultasi gratis?</label>
+        <div>
+          <input type="radio" id="konsultasiYa" name="konsultasi" value="Ya" required>
+          <label for="konsultasiYa">Ya</label>
+        </div>
+        <div>
+          <input type="radio" id="konsultasiTidak" name="konsultasi" value="Tidak" required>
+          <label for="konsultasiTidak">Tidak</label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Kirim via WhatsApp</button>
+    </form>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>&copy; 2013 - <span id="currentYear"></span> Jasa Pembuatan Stempel. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-        // Show/hide go to top button
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.querySelector('.go-to-top').style.display = 'block';
-            } else {
-                document.querySelector('.go-to-top').style.display = 'none';
-            }
-        };
+  <!-- Back to Top Button -->
+  <a href="#" class="btn btn-primary back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-        // Form submission to WhatsApp
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const package = document.getElementById('package').value;
-            const message = `Halo, saya ${name} (${email}). Saya ingin memesan paket stempel ${package}.`;
-            const whatsappUrl = `https://wa.me/6281330763633?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    // Tahun saat ini di footer
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+    // Back to Top Button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+
+    // Testimonial Slider
+    const testimonialCarousel = new bootstrap.Carousel('#testimonialCarousel', {
+      interval: 3000,
+      pause: false
+    });
+
+    // Formulir WhatsApp
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nama = document.getElementById('nama').value;
+      const email = document.getElementById('email').value;
+      const paket = document.getElementById('paket').value;
+      const pesan = document.getElementById('pesan').value;
+      const konsultasi = document.querySelector('input[name="konsultasi"]:checked').value;
+
+      const whatsappMessage = `Halo, saya ${nama}.\nEmail: ${email}\nPaket yang dipilih: ${paket}\nKonsultasi Gratis: ${konsultasi}\nPesan: ${pesan}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://wa.me/6281330763633?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
 </body>
 </html>

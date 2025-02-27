@@ -86,6 +86,17 @@
       margin-bottom: 20px;
       text-align: center;
     }
+	 /* Efek Hover pada Gambar Portfolio */
+    .portfolio-img {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 10px;
+    }
+
+    .portfolio-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
     .portfolio-img {
       cursor: pointer;
       transition: transform 0.3s ease;
@@ -313,30 +324,123 @@
 <hr class="fancy-divider">
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="container my-5">
-  <h2 class="text-center mb-4">Portfolio Kami</h2>
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <img src="stempel1.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+  <section id="portfolio" class="container my-5">
+    <h2 class="text-center mb-4">Portfolio Kami</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="stempel1.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="stempel2.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="stempel3.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+      </div>
+		<div class="col-md-4 mb-4">
+        <img src="stempel4.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="stempel5.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="stempel6.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+      </div>
     </div>
-    <div class="col-md-4 mb-4">
-      <img src="stempel2.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-    </div>
-    <div class="col-md-4 mb-4">
-      <img src="stempel3.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-    </div>
-    <div class="col-md-4 mb-4">
-      <img src="stempel4.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-    </div>
-    <div class="col-md-4 mb-4">
-      <img src="stempel5.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-    </div>
-    <div class="col-md-4 mb-4">
-      <img src="stempel6.jpg" class="img-fluid portfolio-img" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+  </section>
+
+  <!-- Portfolio Modals -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="portfolioModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Biasa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel1.jpg" class="img-fluid" alt="Stempel Biasa">
+          <p class="mt-3">Deskripsi stempel biasa. Cocok untuk keperluan kantor atau organisasi.</p>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
+  <!-- Modal 2 -->
+  <div class="modal fade" id="portfolioModal2" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Logo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel2.jpg" class="img-fluid" alt="Stempel Logo">
+          <p class="mt-3">Deskripsi stempel logo. Cocok untuk mencetak logo perusahaan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="portfolioModal3" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Trodat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel3.jpg" class="img-fluid" alt="Stempel Trodat">
+          <p class="mt-3">Deskripsi stempel Trodat. Praktis dengan sistem isi ulang tinta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!-- Modal 4 -->
+  <div class="modal fade" id="portfolioModal4" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Biasa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel4.jpg" class="img-fluid" alt="Stempel Biasa">
+          <p class="mt-3">Deskripsi stempel biasa. Cocok untuk keperluan kantor atau organisasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!-- Modal 5 -->
+  <div class="modal fade" id="portfolioModal5" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Biasa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel5.jpg" class="img-fluid" alt="Stempel Biasa">
+          <p class="mt-3">Deskripsi stempel biasa. Cocok untuk keperluan kantor atau organisasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+		<!-- Modal 6 -->
+  <div class="modal fade" id="portfolioModal6" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Stempel Biasa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="stempel6.jpg" class="img-fluid" alt="Stempel Biasa">
+          <p class="mt-3">Deskripsi stempel biasa. Cocok untuk keperluan kantor atau organisasi.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Fancy Divider -->
 <hr class="fancy-divider">
 
